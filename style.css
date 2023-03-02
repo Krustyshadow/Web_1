@@ -1,0 +1,371 @@
+/*
+REQUISITOS CSS
+
+    - La tabla o tablas tendrán formato en 
+        - Bordes
+        - Color de fondo
+        - Color borde
+        - Color texto
+    
+    - Diferentes formatos a textos con class e id
+    - Diferentes alineaciones de texto
+    - Decoración de links
+    - Se añadirán formato a cada una de sus partes (bordes, texto, fondo)
+    - Podemos modificar la distribución de la página HTML:
+        - Añadir un menú, si no lo teníamos.
+        - Si lo hemos hecho con una tabla, podemos modificarla y utilizar div.
+    - Por último, cualquier aportación que haga la página más fácil y atractiva para su uso.
+*/
+
+/*Paleta de colores
+
+#1e2733
+#626d71
+#cdcdc0
+#ddbc95
+#b38867
+
+*/
+
+/*Importamos las fuentes que me he descargado previamente*/
+@font-face {
+    font-family: Lobster;
+    src: url(fuentes/LobsterTwo-Bold.ttf);
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(fuentes/Raleway-VariableFont_wght.ttf);
+}
+
+/*Fuentes de la página*/
+*{
+    font-family: Raleway;
+    color: #cdcdc0;
+
+    text-align: justify;
+}
+
+h1, h2 , legend{
+    font-family: Lobster;
+    font-size: xx-large;
+    
+    text-align: center;
+    display: block;
+
+    color: #1e2733;
+}
+
+strong {
+    font-family: Lobster;
+    font-size:x-large;
+
+    color: #1e2733;
+}
+
+span{
+    color: #1e2733;
+    font-weight: 500;
+}
+
+/*body*/
+body{
+    width: 60%;
+    margin: auto;
+
+    background-color: #626d71;
+}
+
+/*indice*/
+div.indice{
+    width: 15%;
+
+    position: fixed;
+    left: 2.5%;
+    top: 5%;
+}
+
+ul.lista_recetas{
+    width: 100%;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    min-width: 85px;
+}
+
+ul.lista_recetas li{
+    border: 1px solid #cdcdc0;
+
+    margin: .5em;
+}
+
+ul.lista_recetas li a{
+    padding: .5em;
+
+    display: block;
+    
+    text-decoration: none;
+    color: #cdcdc0;
+
+    text-align: center;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+ul.lista_recetas li a:hover{
+    background-color: #1e2733;
+    transform: scale(1.1);
+}
+
+/*enlaces*/
+a.link_receta , #cancion{
+    padding: .5em;
+
+    display: block;
+    width: 70%;
+    margin: auto;
+    
+    text-decoration: none;
+    color: #cdcdc0;
+
+    text-align: center;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+a.link_receta:hover , #cancion:hover{
+    background-color: #1e2733;
+    transform: scale(1.1);
+}
+
+div.enlace_inicio{
+    width: 15%;
+
+    position: fixed;
+    right: 2.5%;
+    bottom: 5%;
+}
+
+div.enlace_inicio p{
+    width: 100%;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    min-width: 85px;
+}
+
+div.enlace_inicio p a{
+    border: 1px solid #cdcdc0;
+
+    margin: .5em;
+    padding: .5em;
+
+    display: block;
+    
+    text-decoration: none;
+    color: #cdcdc0;
+
+    text-align: center;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+div.enlace_inicio a:hover{
+    background-color: #1e2733;
+    transform: scale(1.1);
+}
+/*div*/
+.receta{
+    clear: left;
+
+    border: solid #cdcdc0;
+    border-width: 1px;
+
+    padding: 0 2.5em 2.5em 2.5em;
+    margin: 1.5em 0 1.5em 0;
+}
+
+/*imagenes*/
+img.img{
+    border-radius: 2.5em;
+    
+    margin: 0 20% 5% 20%;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+a>img:hover{
+    transform: scale(1.1);
+}
+
+#img_croquetas , #img_albondigas{
+    border-radius: 2.5em;
+
+    margin: 1em 20% 1em 20%;
+}
+
+.contendor_albondigas{
+    width: 100%;
+}
+
+#img_albondigas_2{
+    display: block;
+    margin: auto;
+    border-radius: 1.5em;
+}
+
+/*tabla*/
+table{
+    width: 100%;
+
+    border-collapse: collapse;
+    border-width: 1px;
+}
+
+th{
+    text-align: center;
+    color: #1e2733;
+}
+
+th , tr , td{
+    border: solid #cdcdc0;
+    border-width: 1px;
+
+    padding: 1.5em 1.5em 1.5em 1.5em;
+
+    text-align: center;
+}
+
+th:hover , tr:hover{
+    background-color: #1e2733;
+    color: #cdcdc0;
+}
+
+/*formulario*/
+fieldset{
+    margin: 1.5em 0 1.5em 0;
+    border: 0;
+}
+
+.form_contenedor{
+    margin-top: 0.5em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.form_grupo{
+    position: relative;
+    color: #cdcdc0;
+}
+
+.form_input{
+    width: 100%;
+    
+    background: none;
+    border: none;
+    outline: none;
+
+    font-size: 1rem;
+    padding: .6em .3em;
+
+    border-bottom: 1px solid #cdcdc0;
+}
+
+
+.form_input:not(:placeholder-shown){
+    color: #cdcdc0;
+}
+
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #1e2733;
+}
+
+.form_label{
+    color: #cdcdc0;
+    cursor: pointer;
+
+    position: absolute;
+
+    top: 0;
+    left: 5px;
+
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+
+textarea{
+    resize: none;
+}
+
+    /*radio , checkbox*/
+.form_radio{
+    padding: 1em;
+}
+
+.form_checkbox{
+    padding: 1em;
+
+    display: grid;
+    grid-template-columns: 2em 1fr;
+}
+    /*botones*/
+.contenedor_botones{
+    width: 100%;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+    
+.boton{
+    background: #cdcdc0;
+    color: #1e2733;
+
+    font-family: raleway;
+
+    padding: .5em;
+
+    border: none;
+    border-radius: .25em;
+
+    text-align: center;
+
+    display: inline-block;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.boton:hover{
+    background: #1e2733;
+    color: #cdcdc0;
+
+    font-weight: bold;
+
+    transform: scale(1.1);
+}
+
+/*cita*/
+p>cite{
+    display: inline-block;
+}
+
+cite{
+    margin: 1.5em 0 1.5em 0;
+}
+
+/*confirmación de página valida*/
+.validacion{
+    clear: both;
+    float: left;
+}
+
+.img_validacion_xhtml , .img_validacion_css{
+    float: left;
+}
